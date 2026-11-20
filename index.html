@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mistrz ceremonii Magdalena Saganowska - ślub humanistyczny i pogrzeb świecki</title>
+<meta name="description" content="Celebrantka Magdalena Saganowska prowadzi śluby humanistyczne i pogrzeby świeckie w całej Polsce i za granicą. Scenariusz i przysięgę układamy razem.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="favicon.png" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/pf-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jost-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-m-960.webp" media="(max-width:900px),(orientation:portrait)" imagesrcset="img/hero-m-640.webp 640w, img/hero-m-960.webp 960w, img/hero-m-1280.webp 1280w" imagesizes="100vw">
+<link rel="preload" as="image" href="img/hero-2000.webp" media="(min-width:901px) and (orientation:landscape)" imagesrcset="img/hero-1440.webp 1440w, img/hero-2000.webp 2000w, img/hero-2880.webp 2880w" imagesizes="100vw">
+<style>
+@font-face{font-family:"Playfair Display";font-weight:400 700;font-display:swap;src:url(fonts/pf-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026}
+@font-face{font-family:"Playfair Display";font-weight:400 700;font-display:swap;src:url(fonts/pf-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(fonts/jost-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(fonts/jost-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--gold:#BC9666;--gold-d:#8C6A3E;--cream:#ECD4BC;--ink:#29292B;--text:#46464A;--grey:#F2F3F5;--line:#E3E4E8;--dark:#232325;--hh:68px;--serif:"Playfair Display",Georgia,serif;--sans:Jost,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--text);font:400 17px/1.65 var(--sans);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);line-height:1.15;margin:0}
+h2{font-size:clamp(30px,3.4vw,46px)}
+h3{font-size:clamp(24px,2.2vw,30px)}
+p{margin:0 0 1em}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:54px;padding:0 30px;background:var(--gold);color:#1d1d1f;font:500 17px/1 var(--sans);letter-spacing:.02em;text-decoration:none;border:0;border-radius:2px;cursor:pointer;transition:background .2s}
+.btn:hover{background:#C9A576}
+.btn svg{width:18px;height:18px}
+.krag{fill:none;stroke:var(--gold);stroke-width:1.4;vector-effect:non-scaling-stroke}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;height:var(--hh);background:#fff;border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.top.scrolled{border-color:var(--line);box-shadow:0 6px 24px rgba(20,20,22,.06)}
+.top .wrap{height:100%;display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);flex:none}
+.logo svg{width:46px;height:46px;flex:none}
+.logo svg text{font-family:var(--serif);font-size:25px;fill:var(--gold)}
+.logo span{font:400 12.5px/1.35 var(--sans);letter-spacing:.24em;color:var(--ink)}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{text-decoration:none;font-size:16px;color:var(--ink);padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--gold)}
+.tel{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:500;color:var(--ink);white-space:nowrap}
+.tel svg{width:17px;height:17px;stroke:var(--gold-d);fill:none;stroke-width:1.6}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border:0;background:none;padding:0;cursor:pointer;color:var(--ink)}
+.burger i{display:block;width:24px;height:1.6px;background:currentColor;margin:6px auto;transition:transform .25s,opacity .2s}
+.menu-open .burger i:nth-child(1){transform:translateY(7.6px) rotate(45deg)}
+.menu-open .burger i:nth-child(2){opacity:0}
+.menu-open .burger i:nth-child(3){transform:translateY(-7.6px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - var(--hh));display:flex;align-items:center;overflow:hidden;background:#eee}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:100% 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0) 52%,rgba(255,255,255,.7) 64%,rgba(255,255,255,.9) 80%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;display:flex;justify-content:flex-end}
+.hero-txt{position:relative;width:min(580px,44%);padding:40px 0}
+.hero-txt .krag-duzy{position:absolute;width:560px;height:560px;left:50%;top:50%;transform:translate(-46%,-52%);z-index:-1;opacity:.85}
+.hero h1{font-size:clamp(38px,3.5vw,58px);letter-spacing:-.01em}
+.hero p{font-size:19px;color:#3d3d40;margin:24px 0 32px;max-width:30em}
+
+/* sekcje */
+section{padding:clamp(72px,9vw,128px) 0}
+.szary{background:var(--grey)}
+.ciemny{background:var(--dark);color:#cfcfd3}
+.ciemny h2,.ciemny h3{color:#fff}
+.lead{font-size:19px;max-width:40em}
+.naglowek{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(36px,5vw,60px)}
+.naglowek p{margin:0;max-width:34em}
+
+/* oferta */
+.oferta{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px)}
+.usluga{display:flex;flex-direction:column}
+.luk{position:relative;aspect-ratio:4/4.4;margin-bottom:32px}
+.luk img,.luk .pusty{width:100%;height:100%;object-fit:cover;border-radius:999px 999px 0 0}
+.luk::before{content:"";position:absolute;inset:-12px -12px 24px;border:1px solid var(--gold);border-bottom:0;border-radius:999px 999px 0 0;pointer-events:none}
+.pusty{background:var(--dark);display:flex;align-items:center;justify-content:center}
+.pusty svg{width:56%;height:auto}
+.pusty p{position:absolute;bottom:14%;left:0;right:0;text-align:center;color:var(--cream);font:italic 400 clamp(19px,1.8vw,24px)/1.4 var(--serif);padding:0 14%;margin:0}
+.usluga h3{margin-bottom:14px}
+ul.kregi{list-style:none;padding:0;margin:20px 0 0}
+ul.kregi li{position:relative;padding:10px 0 10px 32px;border-top:1px solid var(--line)}
+ul.kregi li:last-child{border-bottom:1px solid var(--line)}
+ul.kregi li::before{content:"";position:absolute;left:2px;top:18px;width:14px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M5.7 44.3A29 29 0 1 1 19.7 58.3' fill='none' stroke='%23BC9666' stroke-width='5'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* jak pracuje */
+.jak{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
+.jak figure{margin:0;position:relative}
+.jak figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 50%}
+.jak figure figcaption{font-size:14px;color:#77777c;margin-top:10px}
+.kroki{margin-top:28px}
+.krok{display:grid;grid-template-columns:46px 1fr;gap:18px;padding:20px 0;border-top:1px solid #DADBE0}
+.krok:last-child{border-bottom:1px solid #DADBE0}
+.krok svg{width:40px;height:40px}
+.krok h3{font-size:22px;margin:4px 0 6px}
+.krok p{margin:0}
+
+/* o mnie */
+.omnie{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:center}
+.omnie .luk{aspect-ratio:4/5;margin:12px 12px 0}
+.omnie .luk::before{border-color:rgba(188,150,102,.7)}
+.omnie blockquote{margin:0 0 28px;font:italic 400 clamp(26px,2.6vw,36px)/1.3 var(--serif);color:var(--cream)}
+.fakty{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:0}
+.fakty li{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:16px 0;border-top:1px solid rgba(255,255,255,.12)}
+.fakty li:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.fakty b{font:500 22px/1.2 var(--serif);color:var(--gold)}
+
+/* galeria */
+.tasma{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px)/3);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;cursor:grab}
+.tasma::-webkit-scrollbar{display:none}
+.tasma.ciagnie{cursor:grabbing;scroll-snap-type:none}
+.tasma figure{margin:0;scroll-snap-align:start}
+.tasma img{width:100%;aspect-ratio:4/5;object-fit:cover;pointer-events:none;-webkit-user-drag:none;user-select:none}
+.tasma figcaption{padding-top:14px}
+.tasma figcaption b{display:block;font:500 21px/1.3 var(--serif);color:var(--ink)}
+.tasma figcaption span{font-size:15px;color:#77777c}
+.strzalki{display:flex;gap:10px;flex:none}
+.strzalki button{width:52px;height:52px;border:1px solid #CFCFD5;background:#fff;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink);transition:border-color .2s}
+.strzalki button:hover{border-color:var(--gold)}
+.strzalki svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6}
+
+/* opinie */
+.opinie{grid-auto-columns:calc((100% - 48px)/3)}
+.opinia{background:#fff;padding:36px 32px 32px;display:flex;flex-direction:column;scroll-snap-align:start;margin:0}
+.opinia svg{width:34px;height:34px;margin-bottom:18px}
+.opinia blockquote{margin:0 0 24px;font:400 19px/1.55 var(--serif);color:var(--ink);flex:1}
+.opinia figcaption b{display:block;color:var(--ink);font-weight:500}
+.opinia figcaption span{font-size:15px;color:#77777c}
+.zrodlo{margin-top:28px;font-size:15px;color:#6b6b70}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px)}
+.dane{margin:32px 0 0;padding:0;list-style:none}
+.dane li{padding:16px 0;border-top:1px solid var(--line)}
+.dane li:last-child{border-bottom:1px solid var(--line)}
+.dane small{display:block;font-size:14px;color:#77777c}
+.dane a{font-size:20px;font-weight:500;color:var(--ink);text-decoration:none}
+.dane a:hover{color:var(--gold-d)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;background:var(--grey);padding:clamp(24px,3.5vw,44px)}
+label{display:flex;flex-direction:column;gap:6px;font-size:15px;color:var(--ink);font-weight:500}
+label.cala{grid-column:1/-1}
+input,select,textarea{font:400 17px/1.4 var(--sans);color:var(--ink);background:#fff;border:1px solid #D4D5DA;border-radius:2px;padding:13px 14px;width:100%;min-width:0}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:0;border-color:var(--gold)}
+form .btn{grid-column:1/-1;justify-self:start}
+.info{grid-column:1/-1;margin:0;font-size:14px;color:#6b6b70}
+.info[hidden]{display:none}
+
+/* stopka */
+footer{background:var(--dark);color:#b9b9be;padding:64px 0 28px;font-size:15px}
+.stopka{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px}
+footer .logo span{color:#e7e7ea}
+footer h4{font:500 16px/1.3 var(--sans);color:#fff;margin:0 0 12px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.dol{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:22px;font-size:14px;line-height:1.4}
+footer .wylinka-badge{font-size:1em;line-height:1.4}
+footer .wylinka-badge svg{width:1.15em;height:1.15em}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+
+
+/* telefon / tablet pionowo */
+@media (max-width:1100px){.nav{gap:20px}.tel span{display:none}}
+@media (max-width:900px),(orientation:portrait){
+ .hero{align-items:flex-end}
+ .hero picture img{object-position:50% 18%}
+ .hero::after{background:linear-gradient(0deg,rgba(24,24,26,.9) 0,rgba(24,24,26,.72) 34%,rgba(24,24,26,.25) 58%,rgba(24,24,26,0) 72%)}
+ .hero .wrap{justify-content:flex-start}
+ .hero-txt{width:100%;max-width:620px;padding:0 0 clamp(28px,6vh,56px)}
+ .hero-txt .krag-duzy{display:none}
+ .hero h1{color:#fff}
+ .hero p{color:#e6e6e9}
+}
+@media (max-width:900px){
+ :root{--hh:60px}
+ .nav,.top .tel{display:none}
+ .burger{display:block}
+ .logo svg{width:40px;height:40px}
+ .logo span{font-size:11px;letter-spacing:.2em}
+ .menu-open .nav{display:flex;position:fixed;top:var(--hh);left:0;right:0;bottom:0;flex-direction:column;gap:0;background:#fff;padding:12px 20px 32px;margin:0;overflow:auto}
+ .menu-open .nav a{font:500 26px/1.2 var(--serif);padding:18px 0;border-bottom:1px solid var(--line)}
+ .menu-open .nav .tel-m{display:flex}
+ .oferta,.jak,.omnie,.kontakt{grid-template-columns:1fr}
+ .omnie .luk{max-width:420px}
+ .naglowek{flex-direction:column;align-items:flex-start;gap:16px}
+ .tasma,.opinie{grid-auto-columns:78%;gap:16px}
+ .stopka{grid-template-columns:1fr 1fr}
+ .strzalki{display:none}
+ .stopka>div:first-child{grid-column:1/-1}
+}
+.nav .tel-m{display:none;align-items:center;gap:10px;font:500 20px/1.2 var(--sans)!important;color:var(--gold-d)!important;border:0!important;margin-top:18px}
+@media (max-width:600px){
+ body{font-size:16.5px}
+ .wrap{width:calc(100% - 32px)}
+ .hero h1{font-size:clamp(29px,8.4vw,36px)}
+ .hero p{font-size:16.5px;margin:16px 0 24px}
+ .hero .btn{width:100%}
+ .lead{font-size:17.5px}
+ form{grid-template-columns:1fr;margin-inline:-16px}
+ form .btn{width:100%}
+ .tasma,.opinie{grid-auto-columns:84%}
+ .fakty li{grid-template-columns:70px 1fr}
+ .opinia{padding:28px 22px}
+ .dol{flex-direction:column}
+}
+@media (max-height:700px) and (max-width:600px){
+ .hero h1{font-size:28px}
+ .hero p{margin:12px 0 24px;font-size:16px;line-height:1.5}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Magdalena Saganowska - Mistrz ceremonii","telephone":"+48725945455","email":"kontakt@magdalenasaganowska.pl","areaServed":"Polska","url":"https://magdalenasaganowska.pl/"}</script>
+</head>
+<body>
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="logo" href="#" aria-label="Magdalena Saganowska, strona główna">
+   <svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/><text x="32" y="41" text-anchor="middle">MS</text></svg>
+   <span>MAGDALENA<br>SAGANOWSKA</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Menu">
+   <a href="#oferta">Oferta</a>
+   <a href="#przebieg">Przebieg</a>
+   <a href="#o-mnie">O mnie</a>
+   <a href="#ceremonie">Ceremonie</a>
+   <a href="#opinie">Opinie</a>
+   <a href="#kontakt">Kontakt</a>
+   <a class="tel-m" href="tel:+48725945455">725 945 455</a>
+  </nav>
+  <a class="tel" href="tel:+48725945455"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>725 945 455</span></a>
+  <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+ </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0">
+ <picture>
+  <source media="(max-width:900px),(orientation:portrait)" srcset="img/hero-m-640.webp 640w, img/hero-m-960.webp 960w, img/hero-m-1280.webp 1280w" sizes="100vw">
+  <img src="img/hero-2000.webp" srcset="img/hero-1440.webp 1440w, img/hero-2000.webp 2000w, img/hero-2880.webp 2880w" sizes="100vw" width="3460" height="1705" alt="Magdalena Saganowska z teczką ceremonii wśród kwitnących hortensji" fetchpriority="high">
+ </picture>
+ <div class="wrap">
+  <div class="hero-txt">
+   <svg class="krag-duzy" viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/></svg>
+   <h1>Mistrz ceremonii: ślub humanistyczny opowiedziany Waszymi słowami</h1>
+   <p>Prowadzę śluby humanistyczne i pogrzeby świeckie w całej Polsce i za granicą. Scenariusz i przysięgę układamy razem, żeby w tym dniu każde zdanie było Wasze.</p>
+   <a class="btn" href="#kontakt">Zapytaj o wolny termin</a>
+  </div>
+ </div>
+</section>
+
+<section id="oferta">
+ <div class="wrap">
+  <div class="naglowek">
+   <h2>Dwie uroczystości, które prowadzę</h2>
+   <p>Każdą przygotowuję od zera, dla konkretnych ludzi i konkretnego miejsca. Szczegóły ustalamy na spotkaniu online.</p>
+  </div>
+  <div class="oferta">
+   <article class="usluga">
+    <div class="luk"><img src="img/para-800.webp" srcset="img/para-800.webp 800w, img/para-1200.webp 1200w" sizes="(max-width:900px) 92vw, 560px" width="1200" height="799" loading="lazy" alt="Para młoda w ogrodzie po ceremonii" style="object-position:48% 50%"></div>
+    <h3>Ślub humanistyczny</h3>
+    <p>Ceremonia w miejscu, które sami wybierzecie: w ogrodzie, dworze, skansenie, na łące albo na plaży. Bez sztywnych formułek, z przemowami bliskich i rytuałem, który coś dla Was znaczy. Połączona ze ślubem cywilnym nabiera mocy prawnej.</p>
+    <ul class="kregi">
+     <li>Prowadzenie ceremonii ślubnej</li>
+     <li>Opracowanie scenariusza</li>
+     <li>Wybór przysięgi i rytuału</li>
+     <li>Ślub last minute</li>
+    </ul>
+   </article>
+   <article class="usluga">
+    <div class="luk"><div class="pusty"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/></svg><p>Pożegnanie, w którym jest miejsce na wspomnienia i słowa bliskich</p></div></div>
+    <h3>Pogrzeb świecki</h3>
+    <p>Spokojna, godna uroczystość ułożona wokół życia osoby, którą żegnacie. Przebieg i scenariusz ustalamy wspólnie, z uwagą na nastrój i uczucia rodziny.</p>
+    <ul class="kregi">
+     <li>Prowadzenie ceremonii</li>
+     <li>Przygotowanie scenariusza</li>
+     <li>Indywidualne przygotowanie każdej uroczystości</li>
+     <li>Dbałość o atmosferę i potrzeby rodziny</li>
+    </ul>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="szary" id="przebieg">
+ <div class="wrap jak">
+  <figure>
+   <img src="img/ceremonia-800.webp" srcset="img/ceremonia-800.webp 800w, img/ceremonia-1280.webp 1280w, img/ceremonia-1920.webp 1920w" sizes="(max-width:900px) 92vw, 600px" width="1920" height="1277" loading="lazy" alt="Magdalena Saganowska prowadzi ceremonię ślubną z mikrofonem">
+  </figure>
+  <div>
+   <h2>Jak przygotowujemy ceremonię</h2>
+   <p class="lead" style="margin-top:20px">Wy myślicie o tym, co chcecie powiedzieć. Ja dbam o to, żeby wszystko złożyło się w jedną, płynną opowieść.</p>
+   <div class="kroki">
+    <div class="krok"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/></svg><div><h3>Spotkanie online</h3><p>Poznajemy się i ustalamy przebieg, miejsce oraz to, co jest dla Was najważniejsze.</p></div></div>
+    <div class="krok"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/></svg><div><h3>Scenariusz</h3><p>Piszę go dla Was, z rytuałami i momentami dla rodziny i przyjaciół.</p></div></div>
+    <div class="krok"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/></svg><div><h3>Przysięga</h3><p>Pomagam ją ułożyć tak, żeby brzmiała naturalnie i była tylko Wasza.</p></div></div>
+    <div class="krok"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/></svg><div><h3>Dzień ceremonii</h3><p>Prowadzę całość, a kiedy trzeba, podaję mikrofon albo chusteczkę. Wy możecie po prostu przeżyć ten dzień.</p></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="ciemny" id="o-mnie">
+ <div class="wrap omnie">
+  <div class="luk"><img src="img/certyfikat-600.webp" srcset="img/certyfikat-600.webp 600w, img/certyfikat-1000.webp 1000w" sizes="(max-width:900px) 80vw, 440px" width="1000" height="1498" loading="lazy" alt="Magdalena Saganowska z certyfikatem Akademii Mistrzów Ceremonii"></div>
+  <div>
+   <h2>Magdalena Saganowska</h2>
+   <blockquote style="margin-top:22px">Uwielbiam swoją pracę.</blockquote>
+   <p>Z wykształcenia jestem dziennikarką i to właśnie praca dziennikarska przekonała mnie, że moje miejsce jest wśród ludzi. Dziś słucham, piszę i prowadzę: ceremonia to dla mnie opowieść o dwojgu ludziach albo o czyimś życiu, którą trzeba opowiedzieć dobrze.</p>
+   <ul class="fakty">
+    <li><b>studia</b><span>Dziennikarstwo w Wyższej Szkole Handlowej w Katowicach</span></li>
+    <li><b>2020</b><span>Szkolenie dla Mistrzów Ceremonii Ślubnych w Akademii Mistrzów Ceremonii</span></li>
+    <li><b>2022</b><span>Wyróżnienie Polskiego Stowarzyszenia Konsultantów Ślubnych</span></li>
+    <li><b>2023</b><span>Partner honorowy Polskiego Stowarzyszenia Konsultantów Ślubnych</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="ceremonie">
+ <div class="wrap">
+  <div class="naglowek">
+   <h2>Ostatnie ceremonie</h2>
+   <div class="strzalki" data-dla="tasma1"><button aria-label="Poprzednie zdjęcie" data-k="-1"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button aria-label="Następne zdjęcie" data-k="1"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div>
+  </div>
+  <div class="tasma" id="tasma1">
+   <figure><img src="img/luk-800.webp" width="800" height="533" loading="lazy" alt="Magdalena Saganowska czyta scenariusz pod kwiatowym łukiem, przed nią para młoda" style="object-position:58% 50%"><figcaption><b>Paulina i Darek</b><span>Ceremonia w plenerze</span></figcaption></figure>
+   <figure><img src="img/ceremonia-800.webp" width="800" height="532" loading="lazy" alt="Para młoda słucha słów mistrza ceremonii" style="object-position:84% 50%"><figcaption><b>Ślub humanistyczny</b><span>Ceremonia we wnętrzu</span></figcaption></figure>
+   <figure><img src="img/hero-m-640.webp" width="640" height="959" loading="lazy" alt="Magdalena Saganowska z teczką scenariusza ceremonii" style="object-position:50% 30%"><figcaption><b>Scenariusz w ręku</b><span>Każde słowo przygotowane wcześniej</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="szary" id="opinie">
+ <div class="wrap">
+  <div class="naglowek">
+   <h2>Co mówią pary i współpracownicy</h2>
+   <div class="strzalki" data-dla="tasma2"><button aria-label="Poprzednia opinia" data-k="-1"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button aria-label="Następna opinia" data-k="1"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div>
+  </div>
+  <div class="tasma opinie" id="tasma2">
+   <figure class="opinia"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/></svg><blockquote>Ceremonia ślubna poprowadzona przez Magdalenę to niezapomniane przeżycie. Jej profesjonalizm i aparycja łączą się w idealny obraz. Wszystko było perfekcyjnie poprowadzone.</blockquote><figcaption><b>Paulina i Darek</b><span>Restauracja Belwedere, Warszawa</span></figcaption></figure>
+   <figure class="opinia"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/></svg><blockquote>Byliśmy przejęci naszym ślubem. Zdecydowaliśmy się połączyć ślub humanistyczny z cywilnym. Magdalena wykazała się elastycznością oraz otwartością na nasze pomysły. Atmosfera była swobodna i uroczysta zarazem.</blockquote><figcaption><b>Ania i Tomek</b><span>Najstarszy skansen w Płocku</span></figcaption></figure>
+   <figure class="opinia"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/></svg><blockquote>Współpraca z Magdaleną przy ceremoniach humanistycznych to sama przyjemność. Jest profesjonalna, odpowiedzialna, a przy tym zawsze uśmiechnięta. Właśnie tego oczekują moje Pary Młode od celebranta ślubnego.</blockquote><figcaption><b>Idalia Czarnocka</b><span>Wedding planner i designer</span></figcaption></figure>
+  </div>
+  <p class="zrodlo">Więcej opinii na profilu w serwisie Wesele z klasą.</p>
+ </div>
+</section>
+
+<section id="kontakt">
+ <div class="wrap kontakt">
+  <div>
+   <h2>Zapytaj o wolny termin</h2>
+   <p class="lead" style="margin-top:20px">Napiszcie, kiedy i gdzie ma się odbyć uroczystość. Odpowiem, czy termin jest wolny, i zaproponuję spotkanie online.</p>
+   <ul class="dane">
+    <li><small>Telefon</small><a href="tel:+48725945455">725 945 455</a></li>
+    <li><small>E-mail</small><a href="#kontakt">kontakt@magdalenasaganowska.pl</a></li>
+    <li><small>Gdzie pracuję</small><span style="font-size:18px;color:var(--ink)">Na terenie całej Polski oraz za granicą</span></li>
+   </ul>
+  </div>
+  <form id="formularz" novalidate>
+   <label>Imię<input name="imie" autocomplete="name"></label>
+   <label>Telefon lub e-mail<input name="kontakt" autocomplete="email"></label>
+   <label>Uroczystość<select name="rodzaj"><option>Ślub humanistyczny</option><option>Pogrzeb świecki</option></select></label>
+   <label>Data<input name="data" type="date"></label>
+   <label class="cala">Miejsce uroczystości<input name="miejsce" placeholder="np. dwór pod Płockiem"></label>
+   <label class="cala">Wiadomość<textarea name="wiadomosc" placeholder="Kilka słów o Was i o tym, jak wyobrażacie sobie ceremonię"></textarea></label>
+   <button class="btn" type="submit">Wyślij zapytanie</button>
+   <p class="info" id="info" hidden>To podgląd strony, formularz jeszcze nie wysyła wiadomości.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="stopka">
+   <div>
+    <a class="logo" href="#" aria-label="Magdalena Saganowska">
+     <svg viewBox="0 0 64 64" aria-hidden="true"><path class="krag" d="M5.7 44.3A29 29 0 1 1 19.7 58.3"/><text x="32" y="41" text-anchor="middle">MS</text></svg>
+     <span>MAGDALENA<br>SAGANOWSKA</span>
+    </a>
+    <p style="margin-top:18px;max-width:22em">Mistrz ceremonii. Śluby humanistyczne i pogrzeby świeckie w całej Polsce i za granicą.</p>
+   </div>
+   <div>
+    <h4>Strona</h4>
+    <ul><li><a href="#oferta">Oferta</a></li><li><a href="#przebieg">Przebieg</a></li><li><a href="#o-mnie">O mnie</a></li><li><a href="#opinie">Opinie</a></li></ul>
+   </div>
+   <div>
+    <h4>Kontakt</h4>
+    <ul><li><a href="tel:+48725945455">725 945 455</a></li><li><a href="#kontakt">kontakt@magdalenasaganowska.pl</a></li><li><a href="#kontakt">Instagram</a></li><li><a href="#kontakt">Facebook</a></li></ul>
+   </div>
+  </div>
+  <div class="dol">
+   <span>© 2026 Magdalena Saganowska · Polityka prywatności</span>
+   <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=magdalenasaganowska.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+
+  </div>
+ </div>
+</footer>
+
+<script>
+(function(){
+ var top=document.getElementById('top'),b=document.getElementById('burger'),nav=document.getElementById('nav');
+ addEventListener('scroll',function(){top.classList.toggle('scrolled',scrollY>8)},{passive:true});
+ b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Zamknij menu':'Otwórz menu')});
+ nav.addEventListener('click',function(e){if(e.target.closest('a'))document.body.classList.remove('menu-open')});
+ document.querySelectorAll('.strzalki').forEach(function(s){var t=document.getElementById(s.dataset.dla);s.addEventListener('click',function(e){var k=e.target.closest('button');if(!k)return;var f=t.firstElementChild;t.scrollBy({left:k.dataset.k*(f.offsetWidth+parseFloat(getComputedStyle(t).columnGap||24)),behavior:'smooth'})})});
+ document.querySelectorAll('.tasma').forEach(function(t){var d=false,x0,s0,m;t.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;d=true;m=false;x0=e.clientX;s0=t.scrollLeft;t.classList.add('ciagnie')});addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-x0;if(Math.abs(dx)>3)m=true;t.scrollLeft=s0-dx});addEventListener('pointerup',function(){if(!d)return;d=false;t.classList.remove('ciagnie');var f=t.firstElementChild,w=f.offsetWidth+24;t.scrollTo({left:Math.round(t.scrollLeft/w)*w,behavior:'smooth'})});t.addEventListener('click',function(e){if(m){e.preventDefault();e.stopPropagation()}},true)});
+ function sp(){document.querySelectorAll('.strzalki').forEach(function(s){var t=document.getElementById(s.dataset.dla);s.style.visibility=t.scrollWidth>t.clientWidth+4?'visible':'hidden'})}sp();addEventListener('resize',sp);
+ document.getElementById('formularz').addEventListener('submit',function(e){e.preventDefault();document.getElementById('info').hidden=false});
+})();
+</script>
+</body>
+</html>
